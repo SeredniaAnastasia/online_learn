@@ -1,0 +1,45 @@
+ body{
+    font-size: 1rem;
+    line-height: 1.2;
+    color: $text;
+    @extend %librebaskerville-400;
+ }
+ .fon{
+    position: absolute;
+    z-index: -1;
+
+ }
+
+ .parent {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    min-height: 100vh;
+ }
+
+ .container{
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 15px;
+ }
+
+ .container1200{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+ .a{
+    font-size: 1rem;
+    line-height: 1.2;
+    color: $text;
+    @extend %librebaskerville-400;
+ }
+
+.title{
+    color: $text;
+    @extend %lato-400;
+    font-size: 56px;
+    line-height: normal;
+    margin-bottom: 13px;
+}
+

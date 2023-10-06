@@ -1,0 +1,28 @@
+$accent: #FF9100;
+$text: #374B5C;
+$green: #00DBD0;
+$textAccent: #D67E09;
+$slick-dots: #00DBD0;
+
+
+%lato-400{
+    font-family: 'Lato-Regular', sans-serif;
+    font-weight: 400;
+}
+
+%librebaskerville-400{
+    font-family: 'LibreBaskerville-Regular', sans-serif;
+    font-weight: 400;
+}
+
+%btn{
+    background-color: $accent;
+    padding: 12px 36px;
+    text-align: center;
+    color: #fff;
+    @extend %lato-400;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
