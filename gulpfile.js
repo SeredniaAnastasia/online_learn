@@ -44,7 +44,7 @@ function scripts(){
       'app/js/main.js'
     ])  
      .pipe(concat('main.min.js'))
-    // .pipe(uglify()) // мініиізує файл
+    .pipe(uglify()) // мініиізує файл
      .pipe(dest('app/js'))
      .pipe(sync.stream())
 }

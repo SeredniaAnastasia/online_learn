@@ -9,7 +9,7 @@
     &__inner{
         display: flex;
         justify-content: space-between;
-    }
+    }   
     .logo{
         display: inline-block;
         padding: 22px 36px;
@@ -36,6 +36,8 @@
 .footer{
     background-image: url('../images/footer_fon.png');
     background-repeat: no-repeat;
+    background-position: center;
+    margin-top: auto;
     &__inner{
         position: relative;
         display: flex;
