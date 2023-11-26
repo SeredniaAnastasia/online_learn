@@ -28,6 +28,7 @@ function browser(){
     server:{
       baseDir:'app/'
     },
+    port: 3040,
     notify: false
   })
 }

@@ -26,6 +26,7 @@
         min-width: 120px;
         margin-top: 30px;
         margin-right: 80px;
+        transition: all .5s;
         &:focus{
             border-color: #ff8b1e;
             box-shadow: 0 0 0 0.25rem rgba(320,164,6,.5);
@@ -48,9 +49,13 @@
     &__logo{
         display: inline-block;
         margin-bottom: 48px;
+        transition: scale .5s;
         &:focus{
             border-color: #ff8b1e;
             box-shadow: 0 0 0 0.25rem rgba(320,164,6,.5);
+        }
+        &:hover {
+            scale:1.05;
         }
     }
     &__top-text{
@@ -94,7 +99,14 @@
         &__link{
             color: #fff;
             font-size: 14px;
+            padding-bottom: 10px;
             @extend %librebaskerville-400;
+            transition: all .5s;
+            border-bottom: 2px solid transparent;
+            &:hover{
+               border-bottom-color: $slick-dots;
+               
+            }
         }
         &__item:first-child{
             margin-right: 100px;
@@ -163,10 +175,12 @@
         padding: 15px 50px 17px 48px;
         @extend %btn;
         @extend %librebaskerville-400;
+        transition: all .5s;
         &:focus{
             border-color: #ff8b1e;
             box-shadow: 0 0 0 0.25rem rgba(320,164,6,.5);
         }
+        
     }
     &__image{
         position: relative;
@@ -303,27 +317,15 @@
     &__subtraction_1{
         position: absolute;
         top: 35px;
-        &:focus{
-            border-color: #ff8b1e;
-            box-shadow: 0 0 0 0.25rem rgba(320,164,6,.5);
-        }
     }
     &__icon{
-        display: flex;
-        justify-content: center;
-        &:focus{
-            border-color: #ff8b1e;
-            box-shadow: 0 0 0 0.25rem rgba(320,164,6,.5);
-        }
+        margin: 0 auto;
     }
     &__subtraction_2{
         position: absolute;
         bottom: 0;
         right: 0;
-        &:focus{
-            border-color: #ff8b1e;
-            box-shadow: 0 0 0 0.25rem rgba(320,164,6,.5);
-        }
+       
     }
     &__item{
         text-align: center;
@@ -423,6 +425,7 @@
         @extend %librebaskerville-400;
         font-size: 18px;
         margin-left: -171px;
+        transition: all .5s;
         &:focus{
             border-color: #ff8b1e;
             box-shadow: 0 0 0 0.25rem rgba(320,164,6,.5);
