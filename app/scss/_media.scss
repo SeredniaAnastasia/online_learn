@@ -6,6 +6,7 @@
         }
         &__content{
             margin-bottom: 50px;
+            margin-top: 0;
         }
         &__image{
             position: static;  
@@ -24,6 +25,9 @@
         .decor_book_3{
          left: -25px;
         } 
+     }
+     .header {
+        margin-bottom: 60px;
      }
 }
 
@@ -154,6 +158,14 @@
 }
 
 @media (max-width: 620px){
+    .advert {
+        &__subtitle{
+            font-size: 30px;
+        }
+        &__text{
+            font-size: 18px;
+        }
+    }
     .author{
         &__subtraction_1{
             width: 25%;
