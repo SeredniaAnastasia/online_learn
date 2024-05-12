@@ -1,118 +1,20 @@
-
-
-
-
 $(function () {
-
-
-  // $('.menu__btn').on('click', function () {
-  //   $('.menu__list').toggleClass('menu__list--active');
-  //   $('.menu__btn').toggleClass('menu__btn--active');
-  // });
-
-  $('.shop__filter-btn').on('click', function () {
-    $('.shop__filters').slideToggle();
-    $('body').toggleClass('overflow-hidden');
-  });
-
-  $('.footer-top__title').on('click', function () {
-    $(this).next().slideToggle();
-    $(this).toggleClass('active');
-  });
-
-  $('.blog-page__slider').slick({
-    prevArrow: '<button type="button" class="slick-prev"><svg xmlns="http://www.w3.org/2000/svg"  width="9px" height="14px" viewBox="0 0 9 18" version="1.1"> <g ><path  d="M 1.113281 8.402344 L 5.894531 3.621094 C 6.226562 3.289062 6.761719 3.289062 7.085938 3.621094 L 7.882812 4.414062 C 8.210938 4.746094 8.210938 5.28125 7.882812 5.609375  L 4.496094 9 L 7.886719 12.390625 C 8.214844 12.71875 8.214844 13.253906 7.886719 13.582031 L 7.089844 14.378906 C 6.761719 14.710938 6.226562 14.710938 5.898438 14.378906 L 1.117188 9.597656 C 0.785156 9.265625 0.785156 8.734375 1.113281 8.402344 Z M 1.113281 8.402344 "/> </g></svg></button>',
-    nextArrow: '<button type="button" class="slick-next"><svg xmlns="http://www.w3.org/2000/svg"  width="9px" height="14px" viewBox="0 0 9 18" version="1.1"><g ><path d="M 7.886719 9.597656 L 3.105469 14.378906 C 2.773438 14.710938 2.238281 14.710938 1.914062 14.378906 L 1.117188 13.585938 C 0.789062 13.253906 0.789062 12.71875 1.117188 12.390625 L 4.507812 9.003906 L 1.117188 5.613281 C 0.789062 5.285156 0.789062 4.75 1.117188 4.421875 L 1.910156 3.621094  C 2.238281 3.289062 2.773438 3.289062 3.101562 3.621094 L 7.882812 8.402344 C 8.214844 8.734375 8.214844 9.265625 7.886719 9.597656 Z M 7.886719 9.597656 "/></g></svg>       </button>',
-    infinite: false
-  });
-
-
-  $('.product-tabs__top-item').on('click', function (e) {
-    e.preventDefault();
-    $('.product-tabs__top-item').removeClass('product-tabs__top-item--active');
-    $(this).addClass('product-tabs__top-item--active');
-
-    $('.product-tabs__content-item').removeClass('product-tabs__content-item--active');
-    $($(this).attr('href')).addClass('product-tabs__content-item--active');
-  });
-
-  // slider for product details------------------
-  $('.product-slide__thumb').slick({
-    asNavFor: '.product-slide__big',
-    focusOnSelect: true,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    vertical: true,
-    draggable: false
-  });
-
-  $('.product-slide__big').slick({
-    asNavFor: '.product-slide__thumb',
-    draggable: false,
-    arrows: false,
-    fade: true,
-  });
-
-
-  //-------------------------------------------------
-  $('.shop-content__filter-btn').on('click', function () {
-    //Удаляэмо всі класи shop-content__filter-btn--active'
-    $('.shop-content__filter-btn').removeClass('shop-content__filter-btn--active');
-    //Добавляємо клас shop-content__filter-btn--active до елемента на який нажали
-    $(this).addClass('shop-content__filter-btn--active');
-  });
-
-  $('.button-list').on('click', function () {
-    //Добавляємо клас 'product-item--list до контенту
-    $('.product-item').addClass('product-item--list')
-    $('.shop-content__inner').addClass('shop-content__nogrid')
-  });
-
-  $('.button-grid').on('click', function () {
-    //Удаляэмо  клас 'product-item--list' з контенту
-    $('.product-item').removeClass('product-item--list')
-    $('.shop-content__inner').removeClass('shop-content__nogrid')
-  });
-  //-------------------------------------------------
-
-  //-------------------------------------------------
-  // Jquery-form-styler
-  $('.select-style, .product-one__num').styler();
-  //-------------------------------
-
-  // filter price
-  $('.filter-price__input').ionRangeSlider({
-    type: "double",
-    prefix: "$",
-    onStart: function (data) {
-      $('.filter-price__from').text(data.from);
-      $('.filter-price__to').text(data.to);
-    },
-    onChange: function (data) {
-      $('.filter-price__from').text(data.from);
-      $('.filter-price__to').text(data.to);
-    },
-
-  });
-  //filter price
-
-  $('.top-slider__inner').slick({
-    dots: true,
-    arrows: false,
-    fade: true,
-    autoplay: false,
-    autoplaySpeed: 2000
-  });
-
-  //rating 
-  $(".star").rateYo({
-    starWidth: "17px",
-    normaFill: "#ccccce",
-    ratedFill: "#ffc35b",
-    numStars: 5,
-    readOnly: true,
-    starSvg: '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18px"height="16px" viewBox="0 0 18 16" version="1.1"><g id="surface1"><path  d="M 8.101562 0.554688 L 6.0625 4.695312 L 1.496094 5.359375 C 0.679688 5.476562 0.351562 6.488281 0.945312 7.066406 L 4.246094 10.285156  L 3.464844 14.832031 C 3.324219 15.652344 4.191406 16.269531 4.914062 15.882812 L 9 13.738281 L 13.085938 15.882812   C 13.808594 16.265625 14.675781 15.652344 14.535156 14.832031 L 13.753906 10.285156 L 17.054688 7.066406 C 17.648438  6.488281 17.320312 5.476562 16.503906 5.359375 L 11.9375 4.695312 L 9.898438 0.554688 C 9.53125 -0.179688 8.472656 -0.191406  8.101562 0.554688 Z M 8.101562 0.554688 " /></g></svg>'
-  });
-  //rating 
-
+    $('.author__items').slick({
+        dots: true,
+        arrows: false,
+        infinite: true,
+        // autoplay: true,
+        // autoplaySpeed: 3000,
+        slidesToScroll: 1
+      });
+    
+      //rating 
+      $(".star").rateYo({
+        starWidth: "21px",
+        normaFill: "#fff",
+        ratedFill: "#00DBD0",
+        numStars: 5,
+        readOnly: true,
+        starSvg: '<svg width="21" height="21" viewBox="0 0 21 21"  xmlns="http://www.w3.org/2000/svg"><path d="M16.8603 20.0021C16.7735 20.0022 16.6877 19.9842 16.6083 19.9491L10.8683 17.3931L5.12832 19.9491C5.02408 19.9954 4.90913 20.012 4.79605 19.9974C4.68296 19.9827 4.57609 19.9372 4.48712 19.8658C4.39814 19.7945 4.33047 19.7001 4.29153 19.5929C4.25259 19.4857 4.24388 19.3699 4.26632 19.2581L5.53232 12.9161L1.10632 8.48312C1.02698 8.40344 0.970693 8.30376 0.943418 8.19467C0.916142 8.08558 0.918883 7.97116 0.951383 7.86351C0.983882 7.75586 1.04493 7.65901 1.12802 7.58324C1.2111 7.50747 1.31313 7.45559 1.42331 7.43312L7.76632 6.16212L10.2993 0.454132C10.355 0.35209 10.4371 0.266914 10.537 0.207581C10.637 0.148247 10.7511 0.116943 10.8673 0.116943C10.9835 0.116943 11.0976 0.148247 11.1976 0.207581C11.2975 0.266914 11.3797 0.35209 11.4353 0.454132L13.9683 6.16212L20.3113 7.43312C20.4215 7.45559 20.5235 7.50747 20.6066 7.58324C20.6897 7.65901 20.7507 7.75586 20.7832 7.86351C20.8157 7.97116 20.8185 8.08558 20.7912 8.19467C20.764 8.30376 20.7077 8.40344 20.6283 8.48312L16.2023 12.9161L17.4683 19.2581C17.4865 19.3484 17.4845 19.4415 17.4623 19.5309C17.4401 19.6202 17.3984 19.7035 17.3402 19.7748C17.2819 19.8461 17.2085 19.9035 17.1254 19.943C17.0422 19.9825 16.9514 20.003 16.8593 20.0031L16.8603 20.0021ZM10.8683 16.0891C10.9551 16.0889 11.041 16.107 11.1203 16.1421L16.0203 18.3221L14.9203 12.8321C14.9003 12.7317 14.9053 12.6279 14.935 12.5298C14.9646 12.4318 15.018 12.3426 15.0903 12.2701L18.9303 8.42413L13.4103 7.31813C13.3128 7.29859 13.2215 7.25598 13.1439 7.19386C13.0663 7.13175 13.0047 7.05193 12.9643 6.96112L10.8643 2.23813L8.76431 6.96112C8.72397 7.05198 8.66242 7.13183 8.58481 7.19395C8.50719 7.25608 8.41581 7.29867 8.31833 7.31813L2.79831 8.42413L6.63833 12.2701C6.71061 12.3427 6.7639 12.4319 6.79355 12.5299C6.82319 12.6279 6.82827 12.7317 6.80832 12.8321L5.70831 18.3221L10.6083 16.1421C10.688 16.1068 10.7742 16.0888 10.8613 16.0891H10.8683Z"/></svg>'
+      });
 });

@@ -9,5 +9,3 @@ node_modules/
 dist/
 psd/
 package-lock.json
-app/css/*
-main.min.js

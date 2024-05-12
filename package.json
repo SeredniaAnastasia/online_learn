@@ -3,19 +3,18 @@
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
-  "homepage1": "https://github.com/serednii/online_learn",
   "homepage": "./",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "gh-pages -d app"
+    "deploy": "gh-pages -d ./app"
   },
   "author": "serednii mykola",
   "license": "ISC",
   "devDependencies": {
     "@fancyapps/fancybox": "^3.5.7",
-    "gh-pages": "^6.1.1",
     "browser-sync": "^2.27.4",
     "del": "^6.0.0",
+    "gh-pages": "^6.1.1",
     "gulp": "^4.0.2",
     "gulp-imagemin": "^7.1.0",
     "ion-rangeslider": "^2.3.1",
