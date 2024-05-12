@@ -1,5 +1,5 @@
 const mailPath1 = 'http://nastya03.zzz.com.ua/newsletter.php';
-console.log('ggggg')
+
 function formDataToObject(formData) {
   let jsonObject = {};
   for (const [key, value] of formData.entries()) {
@@ -8,21 +8,13 @@ function formDataToObject(formData) {
   return jsonObject;
 }
 
-function clearForm(formElement){
-  formElement.target.querySelectorAll('input:not([type="hidden"]) ,textarea').forEach(e => {
-      e.checked  = e.defaultChecked;
-      e.value = "";
-  })
-}
-
 document.querySelectorAll('.send-form-newsletter').forEach((el) => {
-console.log(el)
+
   el.addEventListener('submit', function (e) {
     e.preventDefault()
     const data = formDataToObject(new FormData(this))
-    console.log(data)
 
-    if(!validateEmail(data.email)){
+    if (!validateEmail(data.email)) {
       alert('Email no valid')
       return;
     }
@@ -41,7 +33,6 @@ console.log(el)
       redirect: 'follow', // manual, *follow, error
       referrerPolicy: 'no-referrer', // no-referrer, *client
       body: JSON.stringify(data),
-      // body: params,
     })
       .then(response => response.json())
       .then(result => {
