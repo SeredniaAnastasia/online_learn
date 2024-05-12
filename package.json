@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
-  "homepage1": "https://github.com/serednii/marcho",
+  "homepage1": "https://github.com/serednii/online_learn",
   "homepage": "./",
-
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "deploy": "gh-pages -d app"
